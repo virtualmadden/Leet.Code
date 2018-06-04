@@ -4,7 +4,7 @@ dotnet: 2.1.300
 script:
   - dotnet restore
   - dotnet build
-  - dotnet test NewRelic.CustomEvents.Tests/NewRelic.CustomEvents.Tests.csproj
+  - dotnet test Leet.Code.Solutions.Tests/Leet.Code.Solutions.Tests.csproj
 branches:
   only:
     - master

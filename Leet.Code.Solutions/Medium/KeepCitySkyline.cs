@@ -2,7 +2,7 @@
 
 namespace Leet.Code.Solutions.Medium
 {
-    public class KeepCitySkyline
+    public class KeepCitySkylineSolution
     {
         public int MaxIncreaseKeepingSkyline(int[][] grid)
         {

@@ -10,10 +10,10 @@ namespace Leet.Code.Solutions.Tests.Easy
         [SetUp]
         public void SetUp()
         {
-            _flippingAnImage = new FlippingAnImage();
+            _solution = new FlippingAnImageSolution();
         }
 
-        private FlippingAnImage _flippingAnImage;
+        private FlippingAnImageSolution _solution;
 
         [Test]
         public void ShouldReturnFlippedImage()
@@ -25,7 +25,7 @@ namespace Leet.Code.Solutions.Tests.Easy
                 new[] {0, 0, 0}
             };
 
-            var result = _flippingAnImage.FlipAndInvertImage(image);
+            var result = _solution.FlipAndInvertImage(image);
 
             object[] flippedAndInvertedImage = {
                 new[] {1, 0, 0},

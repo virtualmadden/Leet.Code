@@ -10,16 +10,16 @@ namespace Leet.Code.Solutions.Tests.Easy
         [SetUp]
         public void SetUp()
         {
-            _jewelsAndStones = new JewelsAndStones();
+            _solution = new JewelsAndStonesSolution();
         }
 
-        private JewelsAndStones _jewelsAndStones;
+        private JewelsAndStonesSolution _solution;
 
         [TestCase("aA", "aAAbbbb", 3)]
         [TestCase("z", "ZZ", 0)]
         public void ShouldOutputCorrectNumberOfJewels(string jewels, string stones, int result)
         {
-            _jewelsAndStones.NumJewelsInStones(jewels, stones).Should().Be(result);
+            _solution.NumJewelsInStones(jewels, stones).Should().Be(result);
         }
     }
 }

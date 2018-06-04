@@ -1,6 +1,6 @@
 ﻿namespace Leet.Code.Solutions.Easy
 {
-    public class FlippingAnImage
+    public class FlippingAnImageSolution
     {
         public int[][] FlipAndInvertImage(int[][] image)
         {

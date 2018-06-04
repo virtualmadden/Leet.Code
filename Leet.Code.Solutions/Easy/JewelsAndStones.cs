@@ -2,7 +2,7 @@
 
 namespace Leet.Code.Solutions.Easy
 {
-    public class JewelsAndStones
+    public class JewelsAndStonesSolution
     {
         public int NumJewelsInStones(string jewels, string stones)
         {

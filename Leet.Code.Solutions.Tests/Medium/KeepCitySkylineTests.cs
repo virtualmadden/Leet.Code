@@ -10,10 +10,10 @@ namespace Leet.Code.Solutions.Tests.Medium
         [SetUp]
         public void SetUp()
         {
-            _keepCitySkyline = new KeepCitySkyline();
+            _solution = new KeepCitySkylineSolution();
         }
 
-        private KeepCitySkyline _keepCitySkyline;
+        private KeepCitySkylineSolution _solution;
 
         [Test]
         public void DoSomething()
@@ -26,7 +26,7 @@ namespace Leet.Code.Solutions.Tests.Medium
                 new[] {0, 3, 1, 0}
             };
 
-            _keepCitySkyline.MaxIncreaseKeepingSkyline(cityGrid).Should().Be(35);
+            _solution.MaxIncreaseKeepingSkyline(cityGrid).Should().Be(35);
         }
     }
 }

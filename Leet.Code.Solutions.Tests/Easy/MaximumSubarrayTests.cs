@@ -1,4 +1,6 @@
-﻿using FluentAssertions;
+﻿using System;
+using System.Collections.Generic;
+using FluentAssertions;
 using Leet.Code.Solutions.Easy;
 using NUnit.Framework;
 
@@ -13,14 +15,17 @@ namespace Leet.Code.Solutions.Tests.Easy
             _solution = new MaximumSubarraySolution();
         }
 
+        private readonly List<Tuple<int[], int>> _testCases = new List<Tuple<int[], int>>
+        {
+            new Tuple<int[], int>(new[] {-2, 1, -3, 4, -1, 2, 1, -5, 4}, 6)
+        };
+
         private MaximumSubarraySolution _solution;
 
-        [Test]
-        public void ShouldReturnTheLargestSum()
+        [TestCaseSource(nameof(_testCases))]
+        public void ShouldReturnTheLargestSum(Tuple<int[], int> testCase)
         {
-            var array = new[] {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-
-            _solution.MaxSubArray(array).Should().Be(6);
+            _solution.MaxSubArray(testCase.Item1).Should().Be(testCase.Item2);
         }
     }
 }

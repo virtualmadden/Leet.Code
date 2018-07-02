@@ -13,15 +13,35 @@
                     if (grid[i, j].Equals('1'))
                     {
                         islands++;
-                    }
 
-                    if (grid[i, j].Equals('0'))
-                    {
+                        DepthFirstSearch(grid, i, j);
                     }
                 }
             }
 
             return islands;
+        }
+
+        private void DepthFirstSearch(char[,] grid, int x, int y)
+        {
+            if (x < 0 || y < 0 || x > grid.GetLength(0) - 1 || y > grid.GetLength(1) - 1)
+            {
+                return;
+            }
+
+            switch (grid[x, y])
+            {
+                case '0':
+                case 'v':
+                    return;
+            }
+
+            grid[x, y] = 'v';
+
+            DepthFirstSearch(grid, x - 1, y);
+            DepthFirstSearch(grid, x + 1, y);
+            DepthFirstSearch(grid, x, y - 1);
+            DepthFirstSearch(grid, x, y + 1);
         }
     }
 }
